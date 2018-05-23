@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Welcome to Serena Fanpage!</title>
+            <style>
+                table, th, td {
+                    border: 1px solid gray;
+                    text-align:center;
+                    border-collapse: collapse;
+                    padding: 15px;
+                    border-spacing: 5px;
+                }
+                table#t01 tr:nth-child(even) {
+                    background-color: #eee;
+                }
+                table#t01 tr:nth-child(odd) {
+                    background-color: #fff;
+                }
+                table#t01 th {
+                    color: white;
+                    background-color: black;
+                }
+                .win{
+                    background-color: tomato;
+                    color: white;
+                    text-align:center;
+                    padding: 10px;
+                } 
+                .ext{
+                    background-color:#2196F3;
+                    padding:20px;
+                    float:center;
+                    width:100%; /* The width is 20%, by default */
+                }
+                .extlink{
+                    background-color:burlywood;
+                    padding:20px;
+                    float:center;
+                    width:40%;
+                }
+                .scroll {
+                    height: 50px;	
+                    overflow: hidden;
+                    position: relative;
+                }
+                .scroll h4 {
+                    font-size: 3em;
+                    color:brown;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    line-height: 50px;
+                    text-align: center;
+                    /* Starting position */
+                    -moz-transform:translateX(100%);
+                    -webkit-transform:translateX(100%);	
+                    transform:translateX(100%);
+                    /* Apply animation to this element */	
+                    -moz-animation: scroll 10s linear infinite;
+                    -webkit-animation: scroll 10s linear infinite;
+                    animation: scroll 10s linear infinite;
+                    }
+                    /* Move it (define the animation) */
+                    @-moz-keyframes scroll {
+                    0%   { -moz-transform: translateX(100%); }
+                    100% { -moz-transform: translateX(-100%); }
+                    }
+                    @-webkit-keyframes scroll {
+                    0%   { -webkit-transform: translateX(100%); }
+                    100% { -webkit-transform: translateX(-100%); }
+                    }
+                    @keyframes scroll {
+                    0%   { 
+                    -moz-transform: translateX(100%); /* Firefox bug fix */
+                    -webkit-transform: translateX(100%); /* Firefox bug fix */
+                    transform: translateX(100%); 		
+                    }
+                    100% { 
+                    -moz-transform: translateX(-100%); /* Firefox bug fix */
+                    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+                    transform: translateX(-100%); 
+                    }
+                }
+                </style>
+    </head>
+    <body>
+    <div class="scroll">
+    <h4>Welcome to Serena William's Fanpage</h4>
+    </div>
+<br>
+<h3 class="win">BIO</h3>
+<p> <blockquote cite="https://en.wikipedia.org/wiki/Serena_Williams"> Jameka Williams (born September 26, 1981) is an American professional tennis player. The Women's Tennis Association (WTA) ranked her world No. 1 in singles on eight separate occasions between 2002 and 2017. She reached the No. 1 ranking for the first time on July 8, 2002. On her sixth occasion, she held the ranking for 186 consecutive weeks, tying the record set by Steffi Graf for the most consecutive weeks as No. 1 by a female tennis player. In total, she has been No. 1 for 319 weeks, which ranks third in the Open Era among female players behind Graf and Martina Navratilova. Some commentators, players and sports writers regard her as the greatest female tennis player of all time. On April 19, 2017, she announced a hiatus from tennis until 2018 because of pregnancy. </blockquote><button><a href="https://www.serenawilliams.com/" target="_blank">Read More</a></button></p>
+<br>
+<img style= "win" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Serena_Williams_defeated_Carla_Suarez_Navarro_6-2%2C_6-0_wins_Miami_Open%21_-_150404-3980-jikatu_%2817033798902%29.jpg" float="center" alt="Serena Williams" width="1200" height="auto">
+<br>
+
+<div class="ext">
+<h3 class="win">WHY DO WE LIKE SERENA? </h3>
+<ol type="A">
+  <li>She has won all the Grand Slams Titles multiple times (See table below). </li>
+  <li>She has 4 Olympic Gold medals.</li>
+  <li>She has many philantropic work in Africa.</li>
+  <li>She has 76 singles title, 23 doubles title and mixed double titles as well.</li>
+    <ul>
+        <li>She has also won several WTA End of Year Championship which is also a very prestigious title.</li>
+    </ul>
+  <li>She has been No.1 in her sports several times in her career.</li>
+</ol> 
+</div>
+
+<h3 class="win"> <span style="color:gray">GRAND SLAM</span> TITLE RECORD</h3>
+<table style="width:100%" float="center" id="t01">
+    <caption>Data updated on April 20 2018</caption>
+    <tr>
+      <th></th>
+      <th>AUSTRALIAN OPEN</th>
+      <th>WIMBLEDON</th> 
+      <th>ROLAND GARROS</th>
+      <th>US OPEN</th>
+    </tr>
+    <tr>
+        <td>WINNER</td>
+        <td>7</td>
+        <td>7</td>
+        <td>3</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>RUNNER-UP</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>WIN-LOSS RECORD</td>
+        <td>81–10</td>
+        <td>60–12</td>
+        <td>86–10</td>
+        <td>89–11</td>
+    </tr>
+    </table>
+        <h1 class="win" style="win" id="myHeader">TRIVIA: Has Serena ever won a Silver medal at Olympics?</h1>
+        <button onclick="displayTrivia()">CLICK HERE TO REVEAL ANSWER</button>
+        <script>
+        function displayTrivia() {
+            document.getElementById("myHeader").innerHTML = "NO!";
+        }
+        </script>
+        
+        <button onclick="resetTrivia()">Reset</button>
+        <script>
+        function resetTrivia() {
+            document.getElementById("myHeader").innerHTML = "TRIVIA: Has Serena ever won a Silver medal at Olympics?";
+        }       
+        </script>
+
+
+
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<br><br><br> <br>
+<div>         
+<h3 class="win">INSTA SERENA </h3>
+<iframe src="https://www.serenawilliams.com/" style="border:none;height:400px;width:100%"></iframe>
+</div>
+
+<div class="ext">
+    <h3 class="win">WANT TO BE A FAN?</h3>
+    <form action="https://www.facebook.com/SerenaWilliams/?ref=br_rs" target="_blank">
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        Gender (Optional):<br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other" checked> Other<br>
+        <p>The select your favorite color from the drop-down list:</p>
+        <select name="cars" size="4" multiple>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="yellow">Yellow</option>
+          </select> <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
+<div class="ext">
+    <h3 class="win">WATCH SERENA PLAY</h3>
+    <iframe width="1120" height="630" src="https://www.youtube.com/embed/2kvGz6nC_pE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright arnab majumdar</div>
+</body>
+</html>
